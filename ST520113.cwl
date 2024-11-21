@@ -11,7 +11,7 @@ inputs:
 
 outputs:
   DT5201:
-    type: Directory
+    type: File
     outputSource: SS5213/DT5201
   DT5208:
     type: Directory
@@ -32,7 +32,7 @@ steps:
         DT5204: Directory
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5208: Directory
     out:
     - DT5201

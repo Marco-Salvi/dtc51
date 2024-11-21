@@ -7,12 +7,12 @@ inputs:
   DT5210: Directory
 
 outputs:
+  DT5201:
+    type: File
+    outputSource: SS5206/DT5201
   DT5204:
     type: Directory
     outputSource: SS5206/DT5204
-  DT5201:
-    type: Directory
-    outputSource: SS5206/DT5201
 
 steps:
   SS5206:
@@ -23,7 +23,7 @@ steps:
       inputs:
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5204: Directory
     out:
     - DT5201

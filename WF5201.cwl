@@ -4,6 +4,7 @@ cwlVersion: v1.2
 class: Workflow
 
 requirements:
+  MultipleInputFeatureRequirement: {}
   SubworkflowFeatureRequirement: {}
 
 inputs:
@@ -11,8 +12,24 @@ inputs:
 
 outputs:
   DT5201:
-    type: Directory
-    outputSource: ST520101/DT5201
+    type: File[]
+    outputSource:
+    - ST520101/DT5201
+    - ST520102/DT5201
+    - ST520103/DT5201
+    - ST520104/DT5201
+    - ST520105/DT5201
+    - ST520106/DT5201
+    - ST520107/DT5201
+    - ST520108/DT5201
+    - ST520109/DT5201
+    - ST520110/DT5201
+    - ST520111/DT5201
+    - ST520112/DT5201
+    - ST520113/DT5201
+    - ST520114/DT5201
+    - ST520115/DT5201
+    linkMerge: merge_flattened
   DT5202:
     type: Directory
     outputSource: ST520104/DT5202
@@ -35,8 +52,11 @@ outputs:
     type: Directory
     outputSource: ST520113/DT5208
   DT5209:
-    type: Directory
-    outputSource: ST520115/DT5209
+    type: Directory[]
+    outputSource:
+    - ST520115/DT5209
+    - ST520114/DT5209
+    linkMerge: merge_flattened
 
 steps:
   ST520101:
@@ -88,13 +108,13 @@ steps:
     in:
       DT5210: DT5210
     run: ST520107.cwl
-    out: 
+    out:
     - DT5201
   ST520108:
     in:
       DT5210: DT5210
     run: ST520108.cwl
-    out: 
+    out:
     - DT5201
   ST520109:
     in:
@@ -124,7 +144,7 @@ steps:
       DT5207: ST520111/DT5207
       DT5210: DT5210
     run: ST520112.cwl
-    out: 
+    out:
     - DT5201
   ST520113:
     in:

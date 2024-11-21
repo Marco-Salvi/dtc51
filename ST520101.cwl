@@ -3,6 +3,9 @@
 cwlVersion: v1.2
 class: Workflow
 
+requirements:
+  MultipleInputFeatureRequirement: {}
+
 inputs:
   DT5202: Directory
   DT5203: Directory
@@ -14,8 +17,21 @@ inputs:
 
 outputs:
   DT5201:
-    type: Directory
-    outputSource: SS5213/DT5201
+    type: File[]
+    outputSource:
+    - SS5201/DT5201
+    - SS5202/DT5201
+    - SS5203/DT5201
+    - SS5204/DT5201
+    - SS5205/DT5201
+    - SS5206/DT5201
+    - SS5207/DT5201
+    - SS5208/DT5201
+    - SS5209/DT5201
+    - SS5210/DT5201
+    - SS5211/DT5201
+    - SS5212/DT5201
+    - SS5213/DT5201
 
 steps:
   SS5201:
@@ -24,7 +40,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
   SS5202:
@@ -33,7 +49,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
   SS5203:
@@ -42,7 +58,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
   SS5204:
@@ -53,7 +69,7 @@ steps:
       inputs:
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5202: Directory
     out:
     - DT5201
@@ -66,7 +82,7 @@ steps:
       inputs:
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5203: Directory
     out:
     - DT5201
@@ -79,7 +95,7 @@ steps:
       inputs:
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5204: Directory
     out:
     - DT5201
@@ -90,7 +106,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
   SS5208:
@@ -99,7 +115,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
   SS5209:
@@ -108,7 +124,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5205: Directory
     out:
     - DT5201
@@ -119,7 +135,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5206: Directory
     out:
     - DT5201
@@ -130,7 +146,7 @@ steps:
       class: Operation
       inputs: {}
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5207: Directory
     out:
     - DT5201
@@ -147,7 +163,7 @@ steps:
         DT5206: Directory
         DT5207: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT52011: Directory
     out:
     - DT5201
@@ -166,7 +182,7 @@ steps:
         DT5203: Directory
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5208: Directory
     out:
     - DT5201
@@ -183,7 +199,7 @@ steps:
         DT5208: Directory
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
         DT5209: Directory
     out:
     - DT5201
@@ -200,6 +216,6 @@ steps:
         DT5209: Directory
         DT5210: Directory
       outputs:
-        DT5201: Directory
+        DT5201: File
     out:
     - DT5201
