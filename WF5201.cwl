@@ -15,160 +15,261 @@ outputs:
     type: File[]
     outputSource:
     - ST520101/DT5201
-    - ST520102/DT5201
-    - ST520103/DT5201
-    - ST520104/DT5201
-    - ST520105/DT5201
-    - ST520106/DT5201
-    - ST520107/DT5201
-    - ST520108/DT5201
-    - ST520109/DT5201
-    - ST520110/DT5201
-    - ST520111/DT5201
-    - ST520112/DT5201
-    - ST520113/DT5201
-    - ST520114/DT5201
-    - ST520115/DT5201
+    - SS5202/DT5201
+    - SS5203/DT5201
+    - SS5204/DT5201
+    - SS5205/DT5201
+    - SS5206/DT5201
+    - SS5207/DT5201
+    - SS5208/DT5201
+    - SS5209/DT5201
+    - SS5210/DT5201
+    - SS5211/DT5201
+    - SS5212/DT5201
+    - SS5213/DT5201
+    - SS5214/DT5201
+    - SS5215/DT5201
     linkMerge: merge_flattened
   DT5202:
     type: Directory
-    outputSource: ST520104/DT5202
+    outputSource: SS5204/DT5202
   DT5203:
     type: Directory
-    outputSource: ST520105/DT5203
+    outputSource: SS5205/DT5203
   DT5204:
     type: Directory
-    outputSource: ST520106/DT5204
+    outputSource: SS5206/DT5204
   DT5205:
     type: Directory
-    outputSource: ST520109/DT5205
+    outputSource: SS5209/DT5205
   DT5206:
     type: Directory
-    outputSource: ST520110/DT5206
+    outputSource: SS5210/DT5206
   DT5207:
     type: Directory
-    outputSource: ST520111/DT5207
+    outputSource: SS5211/DT5207
   DT5208:
     type: Directory
-    outputSource: ST520113/DT5208
+    outputSource: SS5213/DT5208
   DT5209:
     type: Directory[]
     outputSource:
-    - ST520115/DT5209
-    - ST520114/DT5209
+    - SS5215/DT5209
+    - SS5214/DT5209
     linkMerge: merge_flattened
 
 steps:
   ST520101:
     in:
-      DT5202: ST520104/DT5202
-      DT5203: ST520105/DT5203
-      DT5204: ST520106/DT5204
-      DT5205: ST520109/DT5205
-      DT5206: ST520110/DT5206
-      DT5207: ST520111/DT5207
+      DT5202: SS5204/DT5202
+      DT5203: SS5205/DT5203
+      DT5204: SS5206/DT5204
+      DT5205: SS5209/DT5205
+      DT5206: SS5210/DT5206
+      DT5207: SS5211/DT5207
       DT5210: DT5210
     run: ST520101.cwl
     out:
     - DT5201
-  ST520102:
+  SS5202:
+    doc: ST520102
     in:
       DT5210: DT5210
-    run: ST520102.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
     out:
     - DT5201
-  ST520103:
+  SS5203:
+    doc: ST520103
     in:
       DT5210: DT5210
-    run: ST520103.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
     out:
     - DT5201
-  ST520104:
+  SS5204:
+    doc: ST520104
     in:
       DT5210: DT5210
-    run: ST520104.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5202: Directory
     out:
     - DT5202
     - DT5201
-  ST520105:
+  SS5205:
+    doc: ST520105
     in:
       DT5210: DT5210
-    run: ST520105.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5203: Directory
     out:
     - DT5203
     - DT5201
-  ST520106:
+  SS5206:
+    doc: ST520106
     in:
       DT5210: DT5210
-    run: ST520106.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5204: Directory
     out:
     - DT5204
     - DT5201
-  ST520107:
+  SS5207:
+    doc: ST520107
     in:
       DT5210: DT5210
-    run: ST520107.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
     out:
     - DT5201
-  ST520108:
+  SS5208:
+    doc: ST520108
     in:
       DT5210: DT5210
-    run: ST520108.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
     out:
     - DT5201
-  ST520109:
+  SS5209:
+    doc: ST520109
     in:
       DT5210: DT5210
-    run: ST520109.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5205: Directory
     out:
     - DT5205
     - DT5201
-  ST520110:
+  SS5210:
+    doc: ST520110
     in:
       DT5210: DT5210
-    run: ST520110.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5206: Directory
     out:
     - DT5206
     - DT5201
-  ST520111:
+  SS5211:
+    doc: ST520111
     in:
       DT5210: DT5210
-    run: ST520111.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5207: Directory
     out:
     - DT5207
     - DT5201
-  ST520112:
+  SS5212:
+    doc: ST520112
     in:
-      DT5205: ST520109/DT5205
-      DT5206: ST520110/DT5206
-      DT5207: ST520111/DT5207
+      DT5205: SS5209/DT5205
+      DT5206: SS5210/DT5206
+      DT5207: SS5211/DT5207
       DT5210: DT5210
-    run: ST520112.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5205: Directory
+        DT5206: Directory
+        DT5207: Directory
+        DT5210: Directory
+      outputs:
+        DT5201: File
     out:
     - DT5201
-  ST520113:
+  SS5213:
+    doc: ST520113
     in:
-      DT5202: ST520104/DT5202
-      DT5203: ST520105/DT5203
-      DT5204: ST520106/DT5204
+      DT5202: SS5204/DT5202
+      DT5203: SS5205/DT5203
+      DT5204: SS5206/DT5204
       DT5210: DT5210
-    run: ST520113.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5202: Directory
+        DT5203: Directory
+        DT5204: Directory
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5208: Directory
     out:
     - DT5208
     - DT5201
-  ST520114:
+  SS5214:
+    doc: ST520114
     in:
-      DT5208: ST520113/DT5208
+      DT5208: SS5213/DT5208
       DT5210: DT5210
-    run: ST520114.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5208: Directory
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5209: Directory
     out:
     - DT5209
     - DT5201
-  ST520115:
+  SS5215:
+    doc: ST520115
     in:
-      DT5208: ST520113/DT5208
+      DT5208: SS5213/DT5208
       DT5210: DT5210
-    run: ST520115.cwl
+    run:
+      class: Operation
+      inputs:
+        DT5208: Directory
+        DT5210: Directory
+      outputs:
+        DT5201: File
+        DT5209: Directory
     out:
     - DT5201
     - DT5209
